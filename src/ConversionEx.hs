@@ -11,13 +11,10 @@ import qualified Data.ByteString.Lazy as BSL (ByteString)
 import qualified Data.ByteString.Char8 as BSC (putStrLn)
 import qualified Data.ByteString.Lazy.Char8 as BSLC (putStrLn)
 
-import qualified Data.Text as T
-import qualified Data.Text.Lazy as TL
+import qualified Data.Text as T (Text)
+import qualified Data.Text.Lazy as TL (Text)
 import qualified Data.Text.IO as TIO (putStrLn)
 import qualified Data.Text.Lazy.IO as TLIO (putStrLn)
-
--- import qualified Data.ByteString.UTF8 as BSU
--- import qualified Data.ByteString.Lazy.UTF8 as BSLU
 
 main :: IO ()
 main = do
