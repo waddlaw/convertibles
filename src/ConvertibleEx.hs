@@ -1,8 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 module ConvertibleEx where
 
-import Data.String (fromString)
-
 import Data.Convertible (convert)
 import Data.Convertible.Instances.Text ()
 
@@ -28,20 +26,6 @@ import qualified Data.Text.Lazy.IO as TLIO (putStrLn)
 
 main :: IO ()
 main = do
-  putStrLn "========  String ========"
-  putStrLn $ fromString ("String to String" :: String)
-
-  BC.putStrLn $ fromString ("String to ByteString" :: String)
-  BLC.putStrLn $ fromString ("String to ByteString.Lazy" :: String)
-
-  TIO.putStrLn $ fromString ("String to Text" :: String)
-  TLIO.putStrLn $ fromString ("String to Text.Lazy" :: String)
-
-  BB.hPutBuilder stdout $ fromString ("String to ByteString.Builder\n" :: String)
-  BLB.hPutBuilder stdout $ fromString ("String to ByteSgring.Lazy.Builder\n" :: String)
-  print $ (fromString ("String to Text.Lazy.Builder" :: String) :: TLB.Builder)
-  putStrLn ""
-
   putStrLn "========  ByteString ========"
   -- putStrLn $ convert ("ByteString to String" :: B.ByteString)
 
